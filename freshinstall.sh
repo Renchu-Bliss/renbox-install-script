@@ -11,7 +11,7 @@ case $distro in
    1) echo "Cachy, it is...";;
    2) echo "Looks like the indie shit...";;
    *) echo "Nuh huh uh... You didn't say the magic word."
-   
+esac   
  
    
 if [ $distro -eq 1 ]
