@@ -44,7 +44,7 @@ sudo flatpak install flathub tv.kodi.Kodi dev.edfloreshz.CosmicTweaks dev.cappsy
 
 #flatpak installs
 
-sudo flatpak install flathub tv.kodi.Kodi dev.edfloreshz.CosmicTweaks dev.cappsy.CosmicExtAppletDict …vomar.cosmic-ext-applet-bitrate io.github.cosmic_utils.cosmic-ext-applet-clipboard-manager com.vintagetechie.CosmicExtAppletTempest
+sudo flatpak install flathub org.freedesktop.Platform org.freedesktop.Platform.GL.default org.freedesktop.Platform.VAAPI.Intel org.freedesktop.Platform.codecs-extra org.freedesktop.Platform.openh264 org.gtk.Gtk3theme.adw-gtk3 tv.kodi.Kodi com.vintagetechie.CosmicExtAppletTempest dev.cappsy.CosmicExtAppletDict dev.edfloreshz.CosmicTweaks io.github.cosmic_utils.cosmic-ext-applet-clipboard-manager
 
 
 
