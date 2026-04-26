@@ -112,12 +112,6 @@ curl -sL https://raw.githubusercontent.com/synacktraa/ani-skip/master/install | 
 
 
 
-#signins
-
-protonvpn signin lauren.marie.bliss@pm.me
-
-
-
 #JaKooLit dots
 
 sh <(curl -L https://raw.githubusercontent.com/LinuxBeginnings/Arch-Hyprland/main/auto-install.sh)
