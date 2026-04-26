@@ -2,7 +2,7 @@
 
 echo "What are we installing?"
 
-echo "1 - CachyOS"
+echo "1 - CachyOS Cosmic"
 echo "2 - Arch with JaKooLit"
 
 read distro;
@@ -34,7 +34,7 @@ cd
 
 #yay installs
 
-yay -S --removemake --batchinstall --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli lobster-git ani-skip-git mangal-bin opera-gx neofetch
+yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli lobster-git ani-skip-git mangal-bin neofetch
 
 
 #flatpak installs
@@ -93,7 +93,7 @@ cd
 
 # yay installs
 
-yay -S --removemake --batchinstall --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli lobster-git ani-skip-git mangal-bin neofetch proton-mail-bin proton-pass proton-vpn-cli strawberry zen-browser-bin discord
+yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli lobster-git ani-skip-git mangal-bin neofetch proton-mail-bin proton-pass proton-vpn-cli strawberry zen-browser-bin discord
 
 
 #flatpak installs
