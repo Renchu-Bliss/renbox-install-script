@@ -5,6 +5,7 @@ echo "What are we installing?"
 echo "1 - CachyOS Cosmic"
 echo "2 - Arch with JaKooLit"
 echo "3 - Cachy Plasma"
+echo "4 - Cachy Caelestia"
 
 read distro;
 
@@ -12,6 +13,7 @@ case $distro in
    1) echo "Cachy, it is...";;
    2) echo "Looks like the indie shit...";;
    3) echo "Does this count as DIY?";;
+   4) echo "Okay... Pretty and polished this go. ^_^"
    *) echo "Nuh huh uh... You didn't say the magic word."
 esac   
  
@@ -182,6 +184,54 @@ protonvpn signin lauren.marie.bliss@pm.me
 
 reboot
 
+
+fi
+
+
+
+if [ $distro -eq 4 ]
+then
+
+# Cachy Caelestia Install
+
+
+#  pacman installs
+ 
+sudo pacman -S --needed --noconfirm aria2 base-devel cmake make cmatrix curl grep sed fzf git wget yt-dlp cowsay flatpak ffmpeg mpv patch caelestia-shell-git calestia-cli-git caelestia-gif proton-mail-bin proton-pass proton-vpn-cli discord zen-browser-bin strawberry
+
+# yay
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd
+
+
+# yay installs
+
+yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli lobster-git ani-skip-git mangal-bin neofetch
+
+
+#flatpak installs
+
+sudo flatpak install flathub tv.kodi.Kodi
+
+#patches
+
+git clone -b allanime-fix https://github.com/justchokingaround/ani-cli.git ani-cli-fix
+sudo install -m 755 ./ani-cli-fix/ani-cli "$(which ani-cli)"
+hash -r
+ani-cli --version
+
+
+curl -sL https://raw.githubusercontent.com/synacktraa/ani-skip/master/install | sh
+
+
+
+#Caelestia dots
+
+git clone https://github.com/caelestia-dots/caelestia.git ~/.local/share/caelestia
+~/.local/share/caelestia/install.fish
 
 fi
 
