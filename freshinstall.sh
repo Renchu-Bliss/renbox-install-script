@@ -43,7 +43,7 @@ yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled
 
 #flatpak installs
 
-sudo flatpak install flathub tv.kodi.Kodi dev.edfloreshz.CosmicTweaks dev.cappsy.CosmicExtAppletDict …vomar.cosmic-ext-applet-bitrate io.github.cosmic_utils.cosmic-ext-applet-clipboard-manager com.vintagetechie.CosmicExtAppletTempest
+flatpak install flathub tv.kodi.Kodi dev.edfloreshz.CosmicTweaks dev.cappsy.CosmicExtAppletDict …vomar.cosmic-ext-applet-bitrate io.github.cosmic_utils.cosmic-ext-applet-clipboard-manager com.vintagetechie.CosmicExtAppletTempest
 
 
 #flatpak installs
