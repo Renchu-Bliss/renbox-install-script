@@ -13,7 +13,7 @@ case $distro in
    1) echo "Cachy, it is...";;
    2) echo "Looks like the indie shit...";;
    3) echo "Does this count as DIY?";;
-   4) echo "Okay... Pretty and polished this go. ^_^"
+   4) echo "Okay... Pretty and polished this go. ^_^";;
    *) echo "Nuh huh uh... You didn't say the magic word."
 esac   
  
