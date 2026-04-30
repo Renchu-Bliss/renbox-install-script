@@ -197,7 +197,7 @@ then
 
 #  pacman installs
  
-sudo pacman -S --needed --noconfirm aria2 base-devel cmake make cmatrix curl grep sed fzf git wget yt-dlp cowsay flatpak ffmpeg mpv patch caelestia-shell-git calestia-cli-git caelestia-gif proton-mail-bin proton-pass proton-vpn-cli discord zen-browser-bin strawberry
+sudo pacman -S --needed --noconfirm aria2 base-devel cmake make cmatrix curl grep sed fzf git wget yt-dlp cowsay flatpak ffmpeg mpv patch proton-mail-bin proton-pass proton-vpn-cli discord zen-browser-bin strawberry
 
 # yay
 
@@ -209,7 +209,7 @@ cd
 
 # yay installs
 
-yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli lobster-git ani-skip-git mangal-bin neofetch
+yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" caelestia-shell-git caelestia-cli-git caelestia-gif ani-cli lobster-git ani-skip-git mangal-bin neofetch
 
 
 #flatpak installs
