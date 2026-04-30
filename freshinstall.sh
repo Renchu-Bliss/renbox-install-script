@@ -5,7 +5,7 @@ echo "What are we installing?"
 echo "1 - CachyOS Cosmic"
 echo "2 - Arch with JaKooLit"
 echo "3 - Cachy Plasma"
-echo "4 - Cachy Caelestia"
+echo "4 - Cachy Mango Caelestia"
 
 read distro;
 
@@ -13,7 +13,7 @@ case $distro in
    1) echo "Cachy, it is...";;
    2) echo "Looks like the indie shit...";;
    3) echo "Does this count as DIY?";;
-   4) echo "Okay... Pretty and polished this go. ^_^";;
+   4) echo "Okay... Pretty and polished, and very fruity this go. ^_^";;
    *) echo "Nuh huh uh... You didn't say the magic word."
 esac   
  
@@ -209,7 +209,7 @@ cd
 
 # yay installs
 
-yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" caelestia-shell-git caelestia-cli-git caelestia-gif ani-cli lobster-git ani-skip-git mangal-bin neofetch
+yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" caelestia-mango-git caelestia-cli-git caelestia-gif ani-cli lobster-git ani-skip-git mangal-bin neofetch
 
 
 #flatpak installs
