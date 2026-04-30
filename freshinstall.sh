@@ -43,11 +43,6 @@ yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled
 
 #flatpak installs
 
-flatpak install flathub tv.kodi.Kodi dev.edfloreshz.CosmicTweaks dev.cappsy.CosmicExtAppletDict …vomar.cosmic-ext-applet-bitrate io.github.cosmic_utils.cosmic-ext-applet-clipboard-manager com.vintagetechie.CosmicExtAppletTempest
-
-
-#flatpak installs
-
 sudo flatpak install flathub org.freedesktop.Platform org.freedesktop.Platform.GL.default org.freedesktop.Platform.VAAPI.Intel org.freedesktop.Platform.codecs-extra org.freedesktop.Platform.openh264 org.gtk.Gtk3theme.adw-gtk3 tv.kodi.Kodi com.vintagetechie.CosmicExtAppletTempest dev.cappsy.CosmicExtAppletDict dev.edfloreshz.CosmicTweaks io.github.cosmic_utils.cosmic-ext-applet-clipboard-manager
 
 
@@ -209,7 +204,7 @@ cd
 
 # yay installs
 
-yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" caelestia-mango-git caelestia-cli-git caelestia-gif ani-cli lobster-git ani-skip-git mangal-bin neofetch
+yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" caelestia-shell caelestia-cli caelestia-gif ani-cli lobster-git ani-skip-git mangal-bin neofetch foot nemo github-desktop 
 
 
 #flatpak installs
@@ -231,7 +226,7 @@ curl -sL https://raw.githubusercontent.com/synacktraa/ani-skip/master/install | 
 #Caelestia dots
 
 git clone https://github.com/caelestia-dots/caelestia.git ~/.local/share/caelestia
-~/.local/share/caelestia/install.fish
+~/.local/share/caelestia/install.fish --noconfirm --discord --vscode=codium --zen --aurhelper=yay
 
 fi
 
