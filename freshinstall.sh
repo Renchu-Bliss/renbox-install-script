@@ -38,12 +38,12 @@ cd
 
 #yay installs
 
-yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli lobster-git ani-skip-git mangal-bin neofetch
+yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli ani-skip-git mangal-bin
 
 
 #flatpak installs
 
-sudo flatpak install flathub org.freedesktop.Platform org.freedesktop.Platform.GL.default org.freedesktop.Platform.VAAPI.Intel org.freedesktop.Platform.codecs-extra org.freedesktop.Platform.openh264 org.gtk.Gtk3theme.adw-gtk3 tv.kodi.Kodi com.vintagetechie.CosmicExtAppletTempest dev.cappsy.CosmicExtAppletDict dev.edfloreshz.CosmicTweaks io.github.cosmic_utils.cosmic-ext-applet-clipboard-manager
+sudo flatpak install flathub tv.kodi.Kodi
 
 
 
@@ -51,15 +51,7 @@ sudo flatpak install flathub org.freedesktop.Platform org.freedesktop.Platform.G
 
 sudo pacman -R firefox
 
-yay -c
-
 #patches
-
-git clone -b allanime-fix https://github.com/justchokingaround/ani-cli.git ani-cli-fix
-sudo install -m 755 ./ani-cli-fix/ani-cli "$(which ani-cli)"
-hash -r
-ani-cli --version
-
 
 curl -sL https://raw.githubusercontent.com/synacktraa/ani-skip/master/install | sh
 
