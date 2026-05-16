@@ -25,7 +25,7 @@ then
 
 #pacman installs
 
-sudo pacman -S --needed --noconfirm aria2 base-devel cmake make cmatrix cosmic-store curl ffmpeg flatpak fzf git grep krita mpv proton-mail-bin proton-pass proton-vpn-cli rofi sed strawberry wget yt-dlp zen-browser-bin patch discord cowsay pokemon-colorscripts-git
+sudo pacman -S --needed --noconfirm aria2 base-devel cmatrix cosmic-store curl ffmpeg flatpak fzf git grep krita mpv proton-mail-bin proton-pass proton-vpn-cli rofi sed strawberry wget yt-dlp zen-browser-bin patch discord cowsay pokemon-colorscripts-git
 
 
 #get yay
