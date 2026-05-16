@@ -25,7 +25,7 @@ then
 
 #pacman installs
 
-sudo pacman -S --needed --noconfirm aria2 base-devel cmatrix cosmic-store curl ffmpeg flatpak fzf git grep krita mpv proton-mail-bin proton-pass proton-vpn-cli rofi sed strawberry wget yt-dlp zen-browser-bin patch discord cowsay pokemon-colorscripts-git
+sudo pacman -S --needed --noconfirm aria2 base-devel cmatrix cosmic-store curl ffmpeg flatpak fzf git grep krita mpv proton-mail-bin proton-pass proton-vpn-cli rofi sed wget yt-dlp zen-browser-bin patch discord cowsay pokemon-colorscripts-git
 
 
 #get yay
@@ -38,7 +38,7 @@ cd
 
 #yay installs
 
-yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli ani-skip-git mangal-bin
+yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli ani-skip-git mangal-bin rhythmbox
 
 
 #flatpak installs
