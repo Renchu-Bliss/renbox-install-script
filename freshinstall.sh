@@ -25,7 +25,7 @@ then
 
 #pacman installs
 
-sudo pacman -S --needed --noconfirm aria2 base-devel cmatrix cosmic-store curl ffmpeg flatpak fzf git grep krita mpv proton-mail-bin proton-pass proton-vpn-cli rofi sed wget yt-dlp zen-browser-bin patch discord cowsay pokemon-colorscripts-git
+sudo pacman -S --needed --noconfirm aria2 base-devel cmatrix cosmic-store curl ffmpeg flatpak fzf git grep krita mpv proton-mail-bin proton-pass proton-vpn-cli rofi sed wget yt-dlp zen-browser-bin patch discord cowsay pokemon-colorscripts-git dms-shell
 
 
 #get yay
@@ -38,7 +38,7 @@ cd
 
 #yay installs
 
-yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli ani-skip-git mangal-bin rhythmbox
+yay -S --removemake --batchinstall --noconfirm --clearnafter --aur --answerclean  "NotInstalled" --answerdiff "None" --answeredit=None ani-cli ani-skip-git mangal-bin rhythmbox
 
 
 #flatpak installs
@@ -78,7 +78,7 @@ then
 
 #  pacman installs
  
-sudo pacman -S --needed --noconfirm aria2 base-devel cmake make cmatrix curl grep sed fzf git wget yt-dlp cowsay flatpak ffmpeg mpv patch
+sudo pacman -S --needed --noconfirm aria2 base-devel cmake make cmatrix curl grep sed fzf git wget yt-dlp cowsay flatpak ffmpeg mpv patch qbittorrent
 
 # yay
 
@@ -90,7 +90,7 @@ cd
 
 # yay installs
 
-yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli lobster-git ani-skip-git mangal-bin neofetch proton-mail-bin proton-pass proton-vpn-cli strawberry zen-browser-bin discord
+yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli lobster-git ani-skip-git wofi mangal-bin proton-mail-bin proton-pass proton-vpn-cli strawberry zen-browser-bin discord caelestia-cli caelestia-shell caelestia-gif fuzzel
 
 
 #flatpak installs
@@ -98,11 +98,6 @@ yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled
 sudo flatpak install flathub tv.kodi.Kodi
 
 #patches
-
-git clone -b allanime-fix https://github.com/justchokingaround/ani-cli.git ani-cli-fix
-sudo install -m 755 ./ani-cli-fix/ani-cli "$(which ani-cli)"
-hash -r
-ani-cli --version
 
 
 curl -sL https://raw.githubusercontent.com/synacktraa/ani-skip/master/install | sh
