@@ -90,7 +90,7 @@ cd
 
 # yay installs
 
-yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli lobster-git ani-skip-git wofi mangal-bin proton-mail-bin proton-pass proton-vpn-cli strawberry zen-browser-bin discord caelestia-cli caelestia-shell caelestia-gif fuzzel
+yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli ani-skip-git wofi mangal-bin proton-mail-bin proton-pass proton-vpn-cli strawberry zen-browser-bin discord
 
 
 #flatpak installs
