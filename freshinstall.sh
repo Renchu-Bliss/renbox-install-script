@@ -90,17 +90,14 @@ cd
 
 # yay installs
 
-yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli ani-skip-git wofi mangal-bin proton-mail-bin proton-pass proton-vpn-cli strawberry zen-browser-bin discord
+yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli wofi mangal-bin proton-mail-bin proton-pass proton-vpn-cli strawberry zen-browser-bin discord
 
 
 #flatpak installs
 
 sudo flatpak install flathub tv.kodi.Kodi
 
-#patches
 
-
-curl -sL https://raw.githubusercontent.com/synacktraa/ani-skip/master/install | sh
 
 
 
