@@ -106,7 +106,7 @@ curl -sL https://raw.githubusercontent.com/synacktraa/ani-skip/master/install | 
 
 #JaKooLit dots
 
-sh <(curl -L https://raw.githubusercontent.com/LinuxBeginnings/Arch-Hyprland/main/auto-install.sh)
+# sh <(curl -L https://raw.githubusercontent.com/LinuxBeginnings/Arch-Hyprland/main/auto-install.sh)
 
 fi
 
@@ -173,47 +173,8 @@ fi
 
 if [ $distro -eq 4 ]
 then
+sh <(curl -L https://raw.githubusercontent.com/LinuxBeginnings/Arch-Hyprland/main/auto-install.sh)
 
-# Cachy Caelestia Install
-
-
-#  pacman installs
- 
-sudo pacman -S --needed --noconfirm aria2 base-devel cmake make cmatrix curl grep sed fzf git wget yt-dlp cowsay flatpak ffmpeg mpv patch proton-mail-bin proton-pass proton-vpn-cli discord zen-browser-bin strawberry
-
-# yay
-
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd
-
-
-# yay installs
-
-yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" caelestia-shell caelestia-cli caelestia-gif ani-cli lobster-git ani-skip-git mangal-bin neofetch foot nemo github-desktop 
-
-
-#flatpak installs
-
-sudo flatpak install flathub tv.kodi.Kodi
-
-#patches
-
-git clone -b allanime-fix https://github.com/justchokingaround/ani-cli.git ani-cli-fix
-sudo install -m 755 ./ani-cli-fix/ani-cli "$(which ani-cli)"
-hash -r
-ani-cli --version
-
-
-curl -sL https://raw.githubusercontent.com/synacktraa/ani-skip/master/install | sh
-
-
-
-#Caelestia dots
-
-git clone https://github.com/caelestia-dots/caelestia.git ~/.local/share/caelestia
-~/.local/share/caelestia/install.fish --noconfirm --discord --vscode=codium --zen --aurhelper=yay
 
 fi
 
