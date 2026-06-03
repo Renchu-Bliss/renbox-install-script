@@ -40,7 +40,7 @@ cd
 
 #yay installs
 
-yay -S --removemake --batchinstall --noconfirm --clearnafter --aur --answerclean  "NotInstalled" --answerdiff "None" --answeredit=None ani-cli ani-skip-git mangal-bin rhythmbox
+yay -S --removemake --batchinstall --noconfirm --cleanafter --aur --answerclean  "NotInstalled" --answerdiff "None" --answeredit=None ani-cli ani-skip-git mangal-bin rhythmbox
 
 
 #flatpak installs
@@ -92,7 +92,7 @@ cd
 
 # yay installs
 
-yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli wofi mangal-bin proton-mail-bin proton-pass proton-vpn-cli strawberry zen-browser-bin discord
+yay -S --removemake --batchinstall --noconfirm --cleanafter --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli wofi mangal-bin proton-mail-bin proton-pass proton-vpn-cli strawberry zen-browser-bin discord
 
 
 #flatpak installs
@@ -105,7 +105,7 @@ sudo flatpak install flathub tv.kodi.Kodi
 
 #JaKooLit dots
 
-# sh <(curl -L https://raw.githubusercontent.com/LinuxBeginnings/Arch-Hyprland/main/auto-install.sh)
+sh <(curl -L https://raw.githubusercontent.com/LinuxBeginnings/Arch-Hyprland/main/auto-install.sh)
 
 fi
 
@@ -182,7 +182,7 @@ fi
 if [ $distro -eq 5 ]
 then  
 
-#CachyOS Custom Fresh Install Script Cosmic Desktop
+#CachyOS Biggums
 
 #pacman installs
 
@@ -199,7 +199,7 @@ cd
 
 #yay installs
 
-yay -S --removemake --batchinstall --noconfirm --clearnafter --aur --answerclean  "NotInstalled" --answerdiff "None" --answeredit "None" caelestia-shell caelestia-cli caelestia-gif ani-cli mangal-bin wofi
+yay -S --removemake --batchinstall --noconfirm --cleanafter --aur --answerclean  "NotInstalled" --answerdiff "None" --answeredit "None" caelestia-shell caelestia-cli caelestia-gif ani-cli mangal-bin wofi
 
 
 #flatpak installs
@@ -224,9 +224,17 @@ protonvpn signin lauren.marie.bliss@pm.me
 
 systemctl disable cosmic-greeter
 
+
+
 #JaKooLit dots
 
 sh <(curl -L https://raw.githubusercontent.com/LinuxBeginnings/Arch-Hyprland/main/auto-install.sh)
+
+unzip -o biggums.zip
+
+systemctl enable sddm
+
+reboot
 
 fi
 
