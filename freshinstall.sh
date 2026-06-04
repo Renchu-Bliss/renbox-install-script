@@ -15,7 +15,7 @@ case $distro in
    2) echo "Looks like the indie shit...";;
    3) echo "Does this count as DIY?";;
    4) echo "Okay... Pretty and polished, and very fruity this go. ^_^";;
-   5) echo "Chonk, chonk, CHONK!!!
+   5) echo "Chonk, chonk, CHONK!!!";;
    *) echo "Nuh huh uh... You didn't say the magic word."
 esac   
  
