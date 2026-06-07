@@ -214,8 +214,6 @@ sudo pacman -R firefox
 
 #patches
 
-curl -sL https://raw.githubusercontent.com/synacktraa/ani-skip/master/install | sh
-
 curl -fsSL https://install.danklinux.com | sh
 
 #signins
@@ -231,6 +229,8 @@ systemctl disable cosmic-greeter
 sh <(curl -L https://raw.githubusercontent.com/LinuxBeginnings/Arch-Hyprland/main/auto-install.sh)
 
 unzip -o biggums.zip
+
+sudo pacman -R xfce-polkit
 
 systemctl enable sddm
 
