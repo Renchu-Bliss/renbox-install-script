@@ -2,45 +2,51 @@
 
 echo "What are we installing?"
 
-echo "1 - CachyOS Cosmic"
-echo "2 - Arch with JaKooLit"
-echo "3 - Cachy Plasma"
-echo "4 - Cachy Mango Caelestia"
-echo "5 - Biggums"
+echo "1 - aRCeeOS"
+echo "2 - aRchCeeOS"
+echo "3 - CachOS Cosmic"
+echo "4 - JaKooLit"
+echo "5 - Caelestia"
+echo "6 - DankMS"
+echo "7 - HyDE"
+echo "8 - NewTypeOS"
 
 read distro;
 
 case $distro in
-   1) echo "Cachy, it is...";;
-   2) echo "Looks like the indie shit...";;
-   3) echo "Does this count as DIY?";;
-   4) echo "Okay... Pretty and polished, and very fruity this go. ^_^";;
-   5) echo "Chonk, chonk, CHONK!!!";;
+   1) echo "CHONK ChOnK cHoNk!!";;
+   2) echo "Just the Hyprland then...";;
+   3) echo "Basic Cachy, it is...";;
+   4) echo "Lowest Common Denominator";;
+   5) echo "Does this count as indie shit?";;
+   6) echo "Easy Enough...";;
+   7) echo "Cheat code pretty...";;
+   8) echo "You're a regular Lois & Clark... no wait, that's Superman";;
    *) echo "Nuh huh uh... You didn't say the magic word."
 esac   
  
    
-if [ $distro -eq 1 ]
+if [ $distro -eq 3 ]
 then  
 
 #CachyOS Custom Fresh Install Script Cosmic Desktop
 
 #pacman installs
 
-sudo pacman -S --needed --noconfirm aria2 base-devel cmatrix cosmic-store curl ffmpeg flatpak zip unzip fzf git grep krita mpv proton-mail-bin proton-pass proton-vpn-cli rofi sed wget yt-dlp zen-browser-bin patch discord cowsay pokemon-colorscripts-git dms-shell
+sudo pacman -S --needed --noconfirm aria2 base-devel cmatrix cosmic-store curl ffmpeg flatpak zip unzip fzf git grep mpv proton-mail-bin proton-pass proton-vpn-cli rofi sed wget yt-dlp zen-browser-bin patch discord cowsay pokemon-colorscripts-git strawberry
 
 
 #get yay
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si --noconfirm
 cd
 
 
 #yay installs
 
-yay -S --removemake --batchinstall --noconfirm --cleanafter --aur --answerclean  "NotInstalled" --answerdiff "None" --answeredit=None ani-cli ani-skip-git mangal-bin rhythmbox
+yay -S --noconfirm   ani-cli ani-skip-git mangal-bin
 
 
 #flatpak installs
@@ -53,15 +59,20 @@ sudo flatpak install flathub tv.kodi.Kodi
 
 sudo pacman -R firefox
 
-#patches
 
-curl -sL https://raw.githubusercontent.com/synacktraa/ani-skip/master/install | sh
+# unleash the dots
 
+unzip -o media.zip
+
+unzip -o cosmic-dotfiles.zip
 
 
 #signins
 
 protonvpn signin lauren.marie.bliss@pm.me
+
+
+
 
 
 reboot
@@ -75,93 +86,96 @@ fi
 if [ $distro -eq 2 ]
 then
 
-# Arch Jakoolit Install
-
-
-#  pacman installs
- 
-sudo pacman -S --needed --noconfirm aria2 base-devel cmake make zip unzip cmatrix curl grep sed fzf git wget yt-dlp cowsay flatpak ffmpeg mpv patch qbittorrent
-
-# yay
-
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd
-
-
-# yay installs
-
-yay -S --removemake --batchinstall --noconfirm --cleanafter --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli wofi mangal-bin proton-mail-bin proton-pass proton-vpn-cli strawberry zen-browser-bin discord
-
-
-#flatpak installs
-
-sudo flatpak install flathub tv.kodi.Kodi
-
-
-
-
-
-#JaKooLit dots
-
-sh <(curl -L https://raw.githubusercontent.com/LinuxBeginnings/Arch-Hyprland/main/auto-install.sh)
-
-fi
-
-
-if [ $distro -eq 3 ]
-then  
-
-#CachyOS Plasma Custom Fresh Install Script Cosmic Desktop
+# aRchCeeOS
 
 #pacman installs
 
-sudo pacman -S --needed --noconfirm aria2 base-devel cmake make cmatrix curl ffmpeg flatpak fzf git grep krita mpv proton-mail-bin proton-pass proton-vpn-cli rofi sed strawberry wget yt-dlp zen-browser-bin patch discord cowsay
-
+sudo pacman -S --needed --noconfirm aria2 base-devel cmatrix curl ffmpeg foot openssl flatpak zip unzip fzf git grep mpv rofi sed wget yt-dlp patch cowsay
 
 #get yay
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si --noconfirm
 cd
 
 
 #yay installs
 
-yay -S --removemake --batchinstall --noconfirm --aur --answerclean "NotInstalled" --answerdiff "None" ani-cli lobster-git ani-skip-git mangal-bin neofetch
-
+yay -S --noconfirm caelestia-shell-git caelestia-cli-git caelestia-gif ani-cli mangal-bin wofi strawberry proton-vpn-cli proton-pass proton-mail-bin zen-browser-bin discord
 
 
 #flatpak installs
 
 sudo flatpak install flathub tv.kodi.Kodi
-
 
 
 #cleaning
 
 sudo pacman -R firefox
 
-yay -c
-
 #patches
 
-git clone -b allanime-fix https://github.com/justchokingaround/ani-cli.git ani-cli-fix
-sudo install -m 755 ./ani-cli-fix/ani-cli "$(which ani-cli)"
-hash -r
-ani-cli --version
+sudo ani-cli -U
+
+curl -fsSL https://install.danklinux.com | sh
+
+#signins
+
+protonvpn signin lauren.marie.bliss@pm.me
+
+sudo systemctl disable greetd
+
+#JaKooLit dots
+
+sh <(curl -L https://raw.githubusercontent.com/LinuxBeginnings/Arch-Hyprland/main/auto-install.sh)
 
 
-curl -sL https://raw.githubusercontent.com/synacktraa/ani-skip/master/install | sh
+#The lren bits
 
+sudo rm -rf Pictures
+
+unzip -o media.zip
+
+unzip -o archceeos-dotfiles.zip
+
+reboot
+
+fi
+
+
+if [ $distro -eq 5 ]
+then  
+
+#Caelestia
+
+#pacman installs
+
+sudo pacman -S --needed --noconfirm aria2 base-devel cmatrix curl ffmpeg flatpak fzf git grep mpv rofi sed wget yt-dlp patch cowsay
+
+
+#get yay
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si --noconfirm
+cd
+
+
+#yay installs
+
+yay -S --noconfirm ani-cli mangal-bin caelestia-cli-git 
+
+# The Deed
+
+caelestia install
 
 
 #signins
 
 protonvpn signin lauren.marie.bliss@pm.me
 
+unzip -o media.zip
 
 reboot
 
@@ -179,33 +193,31 @@ fi
 
 
 
-if [ $distro -eq 5 ]
+if [ $distro -eq 1 ]
 then  
 
-#CachyOS Biggums
+#aRCeeOS
 
 #pacman installs
 
-sudo pacman -S --needed --noconfirm aria2 base-devel cmatrix cosmic-store curl ffmpeg flatpak zip unzip fzf git grep krita mpv proton-mail-bin proton-pass proton-vpn-cli rofi sed wget yt-dlp zen-browser-bin patch discord cowsay qbittorrent
-
+sudo pacman -S --needed --noconfirm aria2 base-devel cmatrix cosmic-store curl ffmpeg foot openssl flatpak zip unzip fzf git grep mpv proton-mail-bin proton-pass proton-vpn-cli rofi sed wget strawberry yt-dlp zen-browser-bin patch gnome-tweaks gnome-menus discord cowsay openssl qbittorrent gnome-browser-connector slim lightdm lightdm-gtk-greeter-settings lightdm-gtk-greeter lightdm-slick-greeter zig gdm-settings
 
 #get yay
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si --noconfirm
 cd
 
 
 #yay installs
 
-yay -S --removemake --batchinstall --noconfirm --cleanafter --aur --answerclean  "NotInstalled" --answerdiff "None" --answeredit "None" caelestia-shell caelestia-cli caelestia-gif ani-cli mangal-bin wofi
+yay -S --noconfirm caelestia-shell-git caelestia-cli-git caelestia-gif ani-cli mangal-bin wofi gnome-shell-extension-forge-git chromium-extension-web-store ungoogled-chromium-bin 
 
 
 #flatpak installs
 
 sudo flatpak install flathub tv.kodi.Kodi
-
 
 
 #cleaning
@@ -214,25 +226,179 @@ sudo pacman -R firefox
 
 #patches
 
+sudo ani-cli -U
+
 curl -fsSL https://install.danklinux.com | sh
 
 #signins
 
 protonvpn signin lauren.marie.bliss@pm.me
 
-systemctl disable cosmic-greeter
-
-
+sudo systemctl disable greetd
 
 #JaKooLit dots
 
 sh <(curl -L https://raw.githubusercontent.com/LinuxBeginnings/Arch-Hyprland/main/auto-install.sh)
 
-unzip -o biggums.zip
+#all the lren bits
+
+sudo rm -rf Pictures
+
+unzip -o media.zip
+
+unzip -o arceeos-dotfiles.zip
+
+unzip gnome-backup.zip
 
 sudo pacman -R xfce-polkit
 
-systemctl enable sddm
+git clone https://codeberg.org/fairyglade/ly.git
+cd ly
+zig build
+
+sudo zig build installexe -Dinit_system=systemd
+
+cd
+
+sudo systemctl disable sddm
+
+sudo systemctl enable ly@tty2
+
+sudo systemctl disable getty@tty2.service
+
+sudo cp ly-config.ini /etc/ly/config.ini
+
+./gnome-cfg-exporter.sh --restore gnome-backup
+
+
+
+reboot
+
+fi
+
+
+
+
+if [ $distro -eq 6 ]
+then
+
+#Generic Dank
+
+curl -fsSL https://install.danklinux.com | sh
+
+fi
+
+
+if [ $distro -eq 7 ]
+then
+
+sudo pacman -S --needed -- noconfirm git base-devel
+git clone --depth 1 https://github.com/HyDE-Project/HyDE ~/HyDE
+cd ~/HyDE/Scripts
+./install.sh
+
+fi
+
+
+if [ $distro -eq 8 ]
+then  
+
+#NewTypeOS
+
+#pacman installs
+
+sudo pacman -S --needed --noconfirm aria2 base-devel cmatrix curl ffmpeg foot openssl flatpak zip unzip fzf git grep mpv proton-mail-bin proton-pass proton-vpn-cli rofi sed wget strawberry yt-dlp zen-browser-bin patch gnome-tweaks gnome-menus discord cowsay openssl qbittorrent gnome-browser-connector zig gdm-settings
+
+#get yay
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si --noconfirm
+cd
+
+
+#yay installs
+
+yay -S --noconfirm ani-cli mangal-bin gnome-shell-extension-forge-git chromium-extension-web-store ungoogled-chromium-bin mangowm-git noctalia-git
+
+
+#flatpak installs
+
+sudo flatpak install flathub tv.kodi.Kodi
+
+
+#cleaning
+
+sudo pacman -R firefox
+
+#patches
+
+sudo ani-cli -U
+
+mkdir -p ~/.config/mango
+
+cp /etc/mango/config.conf ~/.config/mango/config.conf
+
+echo "exec-once=noctalia">>.config/mango/config.conf
+
+echo "blur=1
+blur_layer=0
+blur_optimized=1
+blur_params_num_passes=2
+blur_params_radius=5
+blur_params_noise=0.02
+blur_params_brightness=0.9
+blur_params_contrast=0.9
+blur_params_saturation=1.0
+layer_animations=0
+
+shadows=1
+layer_shadows=0
+shadow_only_floating=0
+shadows_size=4
+shadows_blur=12
+shadows_position_x=2
+shadows_position_y=2
+shadowscolor=0x000000ff">>.config/mango/config.conf
+
+
+
+
+#signins
+
+protonvpn signin lauren.marie.bliss@pm.me
+
+sudo systemctl disable gdm
+
+
+#all the lren bits
+
+sudo rm -rf Pictures
+
+unzip -o media.zip
+
+unzip -o NewTypeOS-dotfiles.zip
+
+unzip gnome-backup.zip
+
+
+git clone https://codeberg.org/fairyglade/ly.git
+cd ly
+zig build
+
+sudo zig build installexe -Dinit_system=systemd
+
+cd
+
+sudo systemctl enable ly@tty2
+
+sudo systemctl disable getty@tty2.service
+
+sudo cp ly-config.ini /etc/ly/config.ini
+
+./gnome-cfg-exporter.sh --restore gnome-backup
+
+
 
 reboot
 
