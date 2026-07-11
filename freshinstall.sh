@@ -307,7 +307,7 @@ then
 
 #pacman installs
 
-sudo pacman -S --needed --noconfirm aria2 base-devel cmatrix curl ffmpeg foot openssl flatpak zip unzip fzf git grep mpv proton-mail-bin proton-pass proton-vpn-cli rofi sed wget strawberry yt-dlp zen-browser-bin patch gnome-tweaks gnome-menus discord cowsay openssl qbittorrent gnome-browser-connector zig gdm-settings
+sudo pacman -S --needed --noconfirm aria2 base-devel papirus-icon-theme cmatrix curl ffmpeg foot openssl flatpak zip unzip fzf git grep mpv proton-mail-bin proton-pass proton-vpn-cli rofi sed wget strawberry yt-dlp zen-browser-bin patch gnome-tweaks gnome-menus discord cowsay openssl qbittorrent gnome-browser-connector zig gdm-settings
 
 #get yay
 
@@ -335,40 +335,11 @@ sudo pacman -R firefox
 
 sudo ani-cli -U
 
-mkdir -p ~/.config/mango
-
-cp /etc/mango/config.conf ~/.config/mango/config.conf
-
-echo "exec-once=noctalia">>.config/mango/config.conf
-
-echo "blur=1
-blur_layer=0
-blur_optimized=1
-blur_params_num_passes=2
-blur_params_radius=5
-blur_params_noise=0.02
-blur_params_brightness=0.9
-blur_params_contrast=0.9
-blur_params_saturation=1.0
-layer_animations=0
-
-shadows=1
-layer_shadows=0
-shadow_only_floating=0
-shadows_size=4
-shadows_blur=12
-shadows_position_x=2
-shadows_position_y=2
-shadowscolor=0x000000ff">>.config/mango/config.conf
-
-
-
-
 #signins
 
 protonvpn signin lauren.marie.bliss@pm.me
 
-sudo systemctl disable gdm
+sudo systemctl --now disable gdm
 
 
 #all the lren bits
